@@ -107,6 +107,30 @@ h2{
     font-size:1.5rem;
     color:#fff;
 }
+
+    .eyes-message{
+    margin-top:30px;
+    padding:20px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    animation:glow 3s infinite alternate;
+}
+
+.eyes-message span{
+    display:block;
+    font-size:2rem;
+    font-weight:bold;
+    color:#fff;
+    text-shadow:0 0 10px #fff,
+                0 0 20px #ff9ff3,
+                0 0 30px #ff6b81;
+}
+
+@keyframes glow{
+    from{box-shadow:0 0 15px rgba(255,255,255,0.3);}
+    to{box-shadow:0 0 35px rgba(255,255,255,0.8);}
+}
 </style>
 </head>
 
@@ -130,6 +154,15 @@ h2{
         Keep shining and keep being amazing!
         Have a fantastic birthday and an even more wonderful year ahead. 🎁✨
     </p>
+
+    <div class="eyes-message">
+    <span>Your Eyes 👀✨</span>
+    <p>
+        Your eyes are incredibly beautiful, filled with magic and emotions.
+        Every glance feels like a story, every sparkle feels like a dream.
+        In those eyes, I find comfort, wonder, and a world I never want to leave. ❤️
+    </p>
+    </div>
 
     <button class="btn" onclick="showWish()">
         Click for a Surprise 🎊
