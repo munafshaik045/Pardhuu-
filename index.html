@@ -1,210 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Pardhuu 🎂</title>
-
-<style>
+<title>Happy Birthday Pardhuu ❤️</title><style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff6b81,#ff9ff3,#54a0ff);
+    min-height:100vh;
+    background:linear-gradient(-45deg,#ff4d6d,#ff758f,#ff9ff3,#6c5ce7);
+    background-size:400% 400%;
+    animation:gradient 10s ease infinite;
     overflow:hidden;
+    color:white;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.card{
+    width:100%;
+    max-width:900px;
     text-align:center;
-    color:white;
-    z-index:10;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    padding:40px;
+    box-shadow:0 0 30px rgba(255,255,255,0.2);
 }
 
 h1{
     font-size:4rem;
-    animation:bounce 2s infinite;
+    margin-bottom:15px;
+    animation:glow 2s infinite alternate;
 }
 
-h2{
-    font-size:2rem;
-    margin-top:10px;
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff;
+    }
+    to{
+        text-shadow:0 0 25px #fff,
+                    0 0 45px #ff9ff3;
+    }
+}
+
+.subtitle{
+    font-size:1.4rem;
+    margin-bottom:25px;
 }
 
 .message{
-    margin-top:20px;
-    font-size:1.3rem;
-    max-width:700px;
-    line-height:1.6;
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.eyes{
+    margin-top:25px;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.12);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.03);
+    }
+}
+
+.eyes h2{
+    margin-bottom:10px;
 }
 
 .btn{
     margin-top:30px;
     padding:15px 35px;
     border:none;
-    border-radius:30px;
+    border-radius:50px;
     background:white;
-    color:#ff4081;
+    color:#ff4d6d;
     font-size:18px;
+    font-weight:bold;
     cursor:pointer;
     transition:.3s;
 }
 
 .btn:hover{
-    transform:scale(1.1);
+    transform:scale(1.08);
 }
 
-@keyframes bounce{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
+#wish{
+    display:none;
+    margin-top:25px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.15);
+    animation:fadeIn 2s;
 }
 
-/* Balloons */
-.balloon{
-    position:absolute;
-    bottom:-150px;
-    width:70px;
-    height:90px;
-    border-radius:50%;
-    animation:float 8s infinite;
-}
-
-.balloon::after{
-    content:'';
-    position:absolute;
-    width:2px;
-    height:100px;
-    background:white;
-    left:50%;
-    top:90px;
-}
-
-.red{background:#ff4757; left:10%; animation-delay:0s;}
-.blue{background:#1e90ff; left:30%; animation-delay:2s;}
-.yellow{background:#ffa502; left:50%; animation-delay:4s;}
-.green{background:#2ed573; left:70%; animation-delay:1s;}
-.pink{background:#ff6b81; left:90%; animation-delay:3s;}
-
-@keyframes float{
-    0%{
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
         transform:translateY(0);
     }
-    100%{
-        transform:translateY(-120vh);
+}
+
+.heart{
+    position:fixed;
+    font-size:25px;
+    animation:floatUp linear forwards;
+    pointer-events:none;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
     }
 }
 
-.hidden{
-    display:none;
-    margin-top:20px;
-    font-size:1.5rem;
-    color:#fff;
+.footer{
+    margin-top:25px;
+    font-size:1rem;
+    opacity:.9;
 }
+</style></head><body><div class="container"><div class="card"><h1>🎂 Happy Birthday Pardhuu ❤️</h1><p class="subtitle">
+Wishing you endless happiness, laughter and beautiful memories ✨
+</p><div class="message">
+Dear Pardhuu ❤️,<br><br>Today is your special day and I just want to remind you how amazing you are.
 
-    .eyes-message{
-    margin-top:30px;
-    padding:20px;
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    animation:glow 3s infinite alternate;
-}
+Your smile can brighten any day,
+your kindness makes people feel comfortable,
+and your presence makes every moment feel a little more special. 🌹
 
-.eyes-message span{
-    display:block;
-    font-size:2rem;
-    font-weight:bold;
-    color:#fff;
-    text-shadow:0 0 10px #fff,
-                0 0 20px #ff9ff3,
-                0 0 30px #ff6b81;
-}
+</div><div class="eyes"><h2>👀 Your Eyes ✨</h2><p>
+Your eyes are incredibly beautiful,
+filled with magic and emotions.Every glance feels like a story,
+every sparkle feels like a dream,
+and every time I look into them,
+I find comfort, happiness and something truly special. ❤️
 
-@keyframes glow{
-    from{box-shadow:0 0 15px rgba(255,255,255,0.3);}
-    to{box-shadow:0 0 35px rgba(255,255,255,0.8);}
-}
-</style>
-</head>
+</p></div><button class="btn" onclick="showWish()">
+Open My Heart ❤️
+</button><div id="wish"><h2>💖 A Special Message For You 💖</h2><p style="line-height:1.8;margin-top:15px;">There are some people who enter our lives and make everything brighter.
 
-<body>
+You are one of those people. ❤️
 
-<div class="balloon red"></div>
-<div class="balloon blue"></div>
-<div class="balloon yellow"></div>
-<div class="balloon green"></div>
-<div class="balloon pink"></div>
+Thank you for your smile,
+your kindness,
+your beautiful heart,
+and all the wonderful moments.
 
-<div class="container">
-    <h1>🎂 Happy Birthday Pardhuu 🎉</h1>
+May your birthday be filled with happiness,
+love,
+success,
+and every dream you wish for. ✨
 
-    <h2>Wishing You a Day Filled with Joy & Happiness!</h2>
+No matter what,
+you will always be someone very special.
 
-    <p class="message">
-        Dear Pardhuu ❤️,<br><br>
-        May your birthday be filled with endless smiles, laughter,
-        unforgettable memories, and all the success you deserve.
-        Keep shining and keep being amazing!
-        Have a fantastic birthday and an even more wonderful year ahead. 🎁✨
-    </p>
+🎂 Happy Birthday Pardhuu 🎉
 
-    <div class="eyes-message">
-    <span>Your Eyes 👀✨</span>
-    <p>
-        Your eyes are incredibly beautiful, filled with magic and emotions.
-        Every glance feels like a story, every sparkle feels like a dream.
-        In those eyes, I find comfort, wonder, and a world I never want to leave. ❤️
-    </p>
-    </div>
+❤️✨💖
 
-    <button class="btn" onclick="showWish()">
-        Click for a Surprise 🎊
-    </button>
+</p></div><div class="footer">
+Made with ❤️ for Pardhuu
+</div></div></div><script>
 
-    <div id="wish" class="hidden">
-        🎉 You are Special, Pardhuu! 🎂<br>
-        May all your dreams come true! ❤️✨
-    </div>
-</div>
-
-<script>
 function showWish(){
-    document.getElementById("wish").style.display="block";
 
-    for(let i=0;i<50;i++){
-        let confetti=document.createElement("div");
-        confetti.style.position="absolute";
-        confetti.style.width="10px";
-        confetti.style.height="10px";
-        confetti.style.background=
-            `hsl(${Math.random()*360},100%,50%)`;
-        confetti.style.left=Math.random()*100+"vw";
-        confetti.style.top="-20px";
-        confetti.style.borderRadius="50%";
+document.getElementById("wish").style.display="block";
 
-        document.body.appendChild(confetti);
-
-        let fall=Math.random()*5+3;
-
-        confetti.animate([
-            {transform:"translateY(0px)"},
-            {transform:`translateY(${window.innerHeight}px)`}
-        ],{
-            duration:fall*1000,
-            iterations:1
-        });
-
-        setTimeout(()=>confetti.remove(),fall*1000);
-    }
+for(let i=0;i<100;i++){
+createHeart();
 }
-</script>
 
-</body>
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+const hearts=["❤️","💖","💕","💗","💘"];
+
+heart.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+const duration=4+Math.random()*4;
+
+heart.style.animationDuration=duration+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},duration*1000);
+
+}
+
+setInterval(createHeart,700);
+
+</script></body>
 </html>
